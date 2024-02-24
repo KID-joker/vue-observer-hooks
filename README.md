@@ -1,1 +1,1 @@
-# vue-observer-hook
+# vue-observer-hooks

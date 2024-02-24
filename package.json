@@ -1,0 +1,66 @@
+{
+  "name": "vue-observer-hooks",
+  "version": "0.0.0",
+  "description": "Observer hooks for vue2 and 3",
+  "author": "KID-joker <kid_joker@126.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/KID-joker/vue-observer-hooks#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KID-joker/vue-observer-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KID-joker/vue-observer-hooks/issues"
+  },
+  "keywords": [
+    "vue",
+    "observer",
+    "hooks"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pkgroll",
+    "dev": "pkgroll --watch",
+    "play": "vite playground --open",
+    "play:build": "vite build playground",
+    "lint": "eslint . --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "prepublishOnly": "nr build",
+    "release": "bumpp --commit --tag --push && pnpm publish"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.0.0",
+    "vue": "^2.6.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "vue-demi": "^0.14.7"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.4",
+    "@antfu/ni": "^0.21.12",
+    "@types/node": "^20.11.20",
+    "bumpp": "^9.3.0",
+    "eslint": "^8.57.0",
+    "pkgroll": "^2.0.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vue-tsc": "^1.8.27"
+  }
+}
