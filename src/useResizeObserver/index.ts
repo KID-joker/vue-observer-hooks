@@ -5,13 +5,13 @@ import { toValue } from '@/utils/toValue'
 import type { MaybeRefElement } from '@/utils/unrefElement'
 import { unrefElement } from '@/utils/unrefElement'
 
-export interface ResizeCallback {
+export interface ResizeCb {
   (entry: ResizeObserverEntry, observer: ResizeObserver): void
 }
 
 const scope = '__ResizeObserver__'
 
-export function useResizeObserver(target: MaybeRefElement | MaybeRefElement[], callback: ResizeCallback, observeOptions: ResizeObserverOptions) {
+export function useResizeObserver(target: MaybeRefElement | MaybeRefElement[], callback: ResizeCb, observeOptions?: ResizeObserverOptions) {
   const isSupported = ref(window && 'ResizeObserver' in window)
 
   if (!isSupported.value) {

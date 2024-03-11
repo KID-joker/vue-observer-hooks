@@ -11,13 +11,13 @@ export interface IntersectionInit {
   threshold?: number | number[]
 }
 
-export interface IntersectionCallback {
+export interface IntersectionCb {
   (entry: IntersectionObserverEntry, observer: IntersectionObserver): void
 }
 
 const scope = '__IntersectionObserver__'
 
-export function useIntersectionObserver(target: MaybeRefElement | MaybeRefElement[], callback: IntersectionCallback, initOptions: IntersectionInit = {}) {
+export function useIntersectionObserver(target: MaybeRefElement | MaybeRefElement[], callback: IntersectionCb, initOptions: IntersectionInit = {}) {
   const isSupported = ref(window && 'IntersectionObserver' in window)
 
   if (!isSupported.value) {

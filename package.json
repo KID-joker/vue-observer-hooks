@@ -1,6 +1,5 @@
 {
   "name": "vue-observer-hooks",
-  "type": "module",
   "version": "0.0.0",
   "description": "Observer hooks for vue2 and 3",
   "author": "KID-joker <kid_joker@126.com>",
@@ -23,6 +22,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./directives": {
+      "types": "./dist/directives.d.ts",
+      "import": "./dist/directives.mjs",
+      "require": "./dist/directives.js"
     }
   },
   "main": "./dist/index.js",
@@ -39,7 +43,6 @@
     "play:build": "vue-demi-switch 3 && nr -C playgrounds/vue3 build",
     "lint": "eslint . --fix",
     "typecheck": "vue-tsc --noEmit",
-    "prepublishOnly": "nr build",
     "release": "bumpp --commit --tag --push && pnpm publish"
   },
   "peerDependencies": {
@@ -57,7 +60,6 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.4",
-    "@antfu/ni": "^0.21.12",
     "@types/node": "^20.11.20",
     "@vue/compiler-sfc": "^3.4.19",
     "bumpp": "^9.3.0",
@@ -76,7 +78,7 @@
   },
   "lint-staged": {
     "*.{js,ts,vue,md}": [
-      "eslint --cache --fix"
+      "eslint --fix"
     ]
   }
 }

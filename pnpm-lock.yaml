@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^2.6.4
-  '@antfu/ni': ^0.21.12
   '@types/node': ^20.11.20
   '@vue/compiler-sfc': ^3.4.19
   bumpp: ^9.3.0
@@ -24,7 +23,6 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 2.6.4_mz2o6rlliiyoem4mqc764ju6ee
-  '@antfu/ni': 0.21.12
   '@types/node': 20.11.20
   '@vue/compiler-sfc': 3.4.19
   bumpp: 9.3.0
@@ -130,11 +128,6 @@ packages:
     resolution: {integrity: sha512-A3zWY9VeTPnxlMiZtsGHw2lSd3ghwvL8s9RiGOtqvDxhhFfZ781ynsGBa/iUnDJ5zBrmTFQrJDud3TGgRISaxw==}
     dependencies:
       execa: 8.0.1
-    dev: true
-
-  /@antfu/ni/0.21.12:
-    resolution: {integrity: sha512-2aDL3WUv8hMJb2L3r/PIQWsTLyq7RQr3v9xD16fiz6O8ys1xEyLhhTOv8gxtZvJiTzjTF5pHoArvRdesGL1DMQ==}
-    hasBin: true
     dev: true
 
   /@babel/code-frame/7.23.5:
@@ -1240,8 +1233,8 @@ packages:
     dependencies:
       '@volar/language-core': 1.11.1
       '@volar/source-map': 1.11.1
-      '@vue/compiler-dom': 3.4.19
-      '@vue/shared': 3.4.19
+      '@vue/compiler-dom': 3.4.21
+      '@vue/shared': 3.4.21
       computeds: 0.0.1
       minimatch: 9.0.3
       muggle-string: 0.3.1

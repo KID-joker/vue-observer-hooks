@@ -4,13 +4,13 @@ import { noop } from '@/utils'
 import type { MaybeRefElement } from '@/utils/unrefElement'
 import { unrefElement } from '@/utils/unrefElement'
 
-export interface MutationCallback {
+export interface MutationCb {
   (mutation: MutationRecord, observer: MutationObserver): void
 }
 
 const scope = '__MutationObserver__'
 
-export function useMutationObserver(target: MaybeRefElement, callback: MutationCallback, observeOptions: MutationObserverInit) {
+export function useMutationObserver(target: MaybeRefElement, callback: MutationCb, observeOptions?: MutationObserverInit) {
   const isSupported = ref(window && 'MutationObserver' in window)
 
   if (!isSupported.value) {
