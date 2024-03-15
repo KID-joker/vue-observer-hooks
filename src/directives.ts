@@ -1,8 +1,8 @@
 import type { ObjectDirective } from 'vue-demi'
 import { isVue3 } from 'vue-demi'
+import { isFunction } from './utils'
 import type { IntersectionCb, IntersectionInit, MutationCb, ResizeCb } from '.'
 import { useIntersectionObserver, useMutationObserver, useResizeObserver } from '.'
-import { isFunction } from '@/utils'
 
 type BindingValueFunction = IntersectionCb | MutationCb | ResizeCb
 type BindingValueArray = [IntersectionCb, IntersectionInit] | [MutationCb, MutationObserverInit] | [ResizeCb, ResizeObserverOptions]

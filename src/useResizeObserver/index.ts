@@ -1,9 +1,9 @@
 import { nanoid } from 'nanoid'
 import { computed, getCurrentScope, onScopeDispose, ref, watch } from 'vue-demi'
-import { noop } from '@/utils'
-import { toValue } from '@/utils/toValue'
-import type { MaybeRefElement } from '@/utils/unrefElement'
-import { unrefElement } from '@/utils/unrefElement'
+import { noop } from '../utils'
+import { toValue } from '../utils/toValue'
+import type { MaybeRefElement } from '../utils/unrefElement'
+import { unrefElement } from '../utils/unrefElement'
 
 export interface ResizeCb {
   (entry: ResizeObserverEntry, observer: ResizeObserver): void
